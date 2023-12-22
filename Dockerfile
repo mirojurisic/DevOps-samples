@@ -1,12 +1,2 @@
-FROM python:3.10-slim-buster
-
-WORKDIR /src
-
-COPY ./app/requirements.txt requirements.txt
-
-RUN pip install -r requirements.txt
-
-COPY ./app .
-
-CMD python app.py
-
+FROM mcr.microsoft.com/windows/servercore/iis:windowsservercore-ltsc2019 
+ADD wwwroot /inetpub/wwwroot/
