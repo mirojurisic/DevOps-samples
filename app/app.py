@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/health_check")
 def health_check():
-    return "ok"
+    return "more than ok"
 
 
 if __name__ == "__main__":
